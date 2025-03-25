@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "timer-icon-1024x1024-uxh402gz.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "timer-icon-1024x1024-uxh402gz 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -23,6 +25,7 @@
           "value" : "tinted"
         }
       ],
+      "filename" : "timer-icon-1024x1024-uxh402gz 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
