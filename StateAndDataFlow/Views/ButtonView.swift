@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ButtonView: View {
+    
+    let title: String
+    let color: Color
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action) {
+            Text(title)
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+        }
+        .buttonAppearance(color)
     }
 }
 
-#Preview {
-    ButtonView()
+struct ActionButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        ButtonView(title: "Button", color: .blue, action: {})
+    }
 }

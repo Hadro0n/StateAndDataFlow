@@ -18,7 +18,7 @@ struct ButtonModifier: ViewModifier {
             .cornerRadius(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .stroke(Color.black, lineWidth: 4)
+                    .stroke(Color.black, lineWidth: 5)
             )
     }
 }

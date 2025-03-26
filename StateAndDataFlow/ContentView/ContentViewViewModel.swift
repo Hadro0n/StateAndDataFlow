@@ -6,13 +6,11 @@
 //
 
 import Foundation
-import Combine //Предназначен для работы с потоками данных, нужен для работы с многозадачностью. Уходит в прошлое, хоть и новый фреймворк. на смену ему приходит Observation
+import Observation
 
-final class ContentViewViewModel: ObservableObject {
-    let objectWillChange = ObservableObjectPublisher() // Свойство, суть которого - сообщать об изменениях в объекте
+@Observable final class ContentViewViewModel {
     
     var counter = 3
-    
     var buttonTitle = "Start"
     
     private var timer: Timer?
@@ -37,8 +35,6 @@ final class ContentViewViewModel: ObservableObject {
             killTimer()
             buttonTitle = "Reset"
         }
-        
-        objectWillChange.send()
     }
     
     private func killTimer() {
@@ -53,7 +49,5 @@ final class ContentViewViewModel: ObservableObject {
         } else {
             buttonTitle = "Wait..."
         }
-        
-        objectWillChange.send()
     }
 }

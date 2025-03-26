@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct StateAndDataFlowApp: App {
+    @StateObject private var loginViewVM = LoginViewViewModel(
+        user: StorageManager.shared.fetchUser()
+    )
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
+        .environmentObject(loginViewVM)
     }
 }
